@@ -3,13 +3,18 @@ import java.util.Arrays;
 import java.util.List;
 
 public class remove_duplicates {
-
+// remove duplicates from an array
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
+        // create unique array
         List<Integer> uniqueArr = new ArrayList<>();
+        // go through each element
         for (int i = 0; i < arr.size(); i++) {
+            // check if element already has been found
             if (!uniqueArr.contains(arr.get(i))) {
+                // if unique, add it
                 uniqueArr.add(arr.get(i));
             } else {
+                // if not unique, add to removed
                 removedElements.add(arr.get(i));
             }
         }
